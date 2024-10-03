@@ -1,0 +1,132 @@
+### Register
+
+POST http://localhost:8080/api/users
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "ibnu",
+  "password": "18nu",
+  "name": "Ibnu Rabbani"
+}
+
+### Login
+
+POST http://localhost:8080/api/auth/login
+Accept: application/json
+Content-Type: application/json
+
+{
+  "username": "ibnu",
+  "password": "18nu"
+}
+
+### Get User
+
+GET http://localhost:8080/api/users/current
+Accept: application/json
+X-API-TOKEN: f7d73e91-91ca-4844-8e9f-acff188ebb77
+
+### Update User
+PATCH http://localhost:8080/api/users/current
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: f7d73e91-91ca-4844-8e9f-acff188ebb77
+
+{
+  "name": "M Ibnu Rabbani"
+}
+
+### Create Contact
+POST http://localhost:8080/api/contacts
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: f7d73e91-91ca-4844-8e9f-acff188ebb77
+
+{
+  "firstName": "Dimaz",
+  "lastName": "Anugrah",
+  "email": "dimaz@example.com",
+  "phone": "088008800880"
+}
+
+### Search Contact
+GET http://localhost:8080/api/contacts
+Accept: application/json
+X-API-TOKEN: f7d73e91-91ca-4844-8e9f-acff188ebb77
+
+### Get Contact
+GET http://localhost:8080/api/contacts/ea5e6fa3-5e2c-4e4e-98ee-d925f60a9137
+Accept: application/json
+X-API-TOKEN: f7d73e91-91ca-4844-8e9f-acff188ebb77
+
+### Update Contact
+PUT http://localhost:8080/api/contacts/ea5e6fa3-5e2c-4e4e-98ee-d925f60a9137
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: f7d73e91-91ca-4844-8e9f-acff188ebb77
+
+{
+  "firstName": "Ibnu",
+  "lastName": " ",
+  "email": "ibnu@example.com",
+  "phone": "0810987654321"
+}
+
+### Remove Contact
+
+DELETE http://localhost:8080/api/contacts/e654cc9c-198b-4d95-8bc1-5d31329ef0ea
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: f7d73e91-91ca-4844-8e9f-acff188ebb77
+
+{
+  "firstName": "Dimaz",
+  "lastName": "Anugrah",
+  "email": "dimaz@example.com",
+  "phone": "088008800880"
+}
+
+### Add Address
+POST http://localhost:8080/api/contacts/ea5e6fa3-5e2c-4e4e-98ee-d925f60a9137/addresses
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: f7d73e91-91ca-4844-8e9f-acff188ebb77
+
+{
+  "country": "Indonesia",
+  "city": "Jakarta",
+  "province": "Jakarta Selatan",
+  "postalCode": "00001",
+  "street": "Jalan Jalan"
+}
+
+### Get Address
+GET http://localhost:8080/api/contacts/ea5e6fa3-5e2c-4e4e-98ee-d925f60a9137/addresses/ff4a8a2a-69bb-4027-ac7f-1e70f97991dc
+Accept: application/json
+X-API-TOKEN: f7d73e91-91ca-4844-8e9f-acff188ebb77
+
+### List Address
+GET http://localhost:8080/api/contacts/ea5e6fa3-5e2c-4e4e-98ee-d925f60a9137/addresses
+Accept: application/json
+X-API-TOKEN: f7d73e91-91ca-4844-8e9f-acff188ebb77
+
+### Update Address
+PUT http://localhost:8080/api/contacts/ea5e6fa3-5e2c-4e4e-98ee-d925f60a9137/addresses/0bd5a278-2ad3-4de6-a7b5-d72135b397ab
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: f7d73e91-91ca-4844-8e9f-acff188ebb77
+
+{
+  "country": "Indonesia",
+  "city": "Jakarta",
+  "province": "Jakarta Selatan",
+  "postalCode": "00001",
+  "street": "Jalan Kemana"
+}
+
+### Delete Address
+DELETE http://localhost:8080/api/contacts/ea5e6fa3-5e2c-4e4e-98ee-d925f60a9137/addresses/ff4a8a2a-69bb-4027-ac7f-1e70f97991dc
+Accept: application/json
+Content-Type: application/json
+X-API-TOKEN: f7d73e91-91ca-4844-8e9f-acff188ebb77
